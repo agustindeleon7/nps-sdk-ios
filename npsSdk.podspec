@@ -15,4 +15,6 @@ Pod::Spec.new do |s|
   s.description  = 'This SDK helps you yo integrate from an iOS Device to NPS Services'
   s.preserve_paths = 'Frameworks/FraudForce.framework'
   s.vendored_frameworks = 'Frameworks/FraudForce.framework'
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
